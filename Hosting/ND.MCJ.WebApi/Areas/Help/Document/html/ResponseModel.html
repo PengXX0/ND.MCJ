@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>请求基类：ResponseBase</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../dist/css/css.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="col-md-10 doc-wrapper" role="main">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                请求基类：ResponseBase
+            </div>
+            <div class="panel-body">
+                <p>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&nbsp; &nbsp; ///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">返回基类</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">public</span> <span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">class</span> <span style="font-size: 13px; font-family: Consolas; color: #2B91AF; background: white; background: white">ResponseBase</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; {</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">返回编码</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">public</span> <span style="font-size: 13px; font-family: Consolas; color: #2B91AF; background: white; background: white">ResponseCode</span><span style="font-size: 13px; font-family: Consolas; background: white"> Code { </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">get</span><span style="font-size: 13px; font-family: Consolas; background: white">; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">set</span><span style="font-size: 13px; font-family: Consolas; background: white">; }</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">返回消息</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">public</span> <span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">string</span><span style="font-size: 13px; font-family: Consolas; background: white"> Massage { </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">get</span><span style="font-size: 13px; font-family: Consolas; background: white">; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">set</span><span style="font-size: 13px; font-family: Consolas; background: white">; }</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">返回内容</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">public</span> <span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">object</span><span style="font-size: 13px; font-family: Consolas; background: white"> Data { </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">get</span><span style="font-size: 13px; font-family: Consolas; background: white">; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">set</span><span style="font-size: 13px; font-family: Consolas; background: white">; }</span>
+                </p>
+                <p>
+                    <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; }</span>
+                </p>
+                <p>
+                    <br />
+                </p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">
+                    <br />
+                </span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp; &nbsp;&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">返回编码</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">public</span> <span style="font-size: 13px; font-family: Consolas; color: blue; background: white; background: white">enum</span> <span style="font-size: 13px; font-family: Consolas; color: #2B91AF; background: white; background: white">ResponseCode</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; {</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">请求成功</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Success = 200,</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">请求错误</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RequestError = 501,</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">密钥错误</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TokenError = 502,</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: 宋体; color: green; background: white; background: white">未登录</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">///</span> <span style="font-size: 13px; font-family: Consolas; color: gray; background: white; background: white">&lt;/summary&gt;</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoLogin = 503</span>
+            </p>
+            <p>
+                <span style="font-size: 13px; font-family: Consolas; background: white">&nbsp;&nbsp;&nbsp; }</span>
+            </p>
+            <p>
+                <br />
+            </p>
+        </div>
+    </div>
+</body>
+</html>

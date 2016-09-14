@@ -1,0 +1,238 @@
+﻿@{Layout = null;}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>接口文档</title>
+    @Styles.Render("~/Content/style/")
+    @Scripts.Render("~/bundles/script")
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li><a href="javascript:;">APP调用基本说明</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/instructions.html">调用提示</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/RequestBase.html">请求基类：RequestBase</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/ResponseBase.html">返回基类：ResponseBase</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UploadImage.html">上传图片</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/edit.html">编辑接口参数文档</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/debug.html">接口调试</a></li>
+                    </ul>
+                </li>
+                <li><a href="~/Areas/Api/ApiDoc/Index.html">APP首页</a></li>
+                <li><a href="javascript:;">用户操作</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/UserReg.html">注册</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UserLogin.html">登录</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UserMobileLogin.html">手机验证码登录</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UserThirdAuth.html">第三方登录</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UserRestPass.html">找回密码</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/MobileCode.html">发送手机验证码</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UserIsExsist.html">验证用户是否已存在</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/UserCheckMobileUserName.html">验证手机与用户名是否匹配</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">众筹项目管理</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundList.html">众筹列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundView.html">众筹详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundDetails.html">众筹详情(新)</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundUserList.html">用户已发布众筹列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundUserCreateList.html">好友已发布众筹列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundAdd.html">发起众筹</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundDel.html">撤销众筹</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CrowdFundCheckAbleCreateCF.html">验证能否发布项目</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">省市区查询</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/PlaceProvince.html">获取所有省</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PlaceCity.html">根据省Id查市</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PlaceDistrict.html">根据市Id查区县</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">收货地址管理</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/AddressList.html">地址列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AddressAdd.html">添加地址</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AddressView.html">地址详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AddressEdit.html">编辑地址</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AddressDel.html">删除地址</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AddressSetDefault.html">设置默认地址</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">项目支持管理</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportList.html">支持人员列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportUserList.html">用户支持项目列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportAdd.html">用户添加支持项目记录</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportView.html">用户支持项目详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportManList.html">支持的人</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportSetStatus.html">设置支持状态</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportConfirmRepay.html">投资人确认开始回报</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SupportUpdateAddress.html">修改支持回报的地址</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">回报方式管理</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/RepayWayList.html">回报列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/RepayWaySupList.html">所有回报和支持者列表</a></li>
+                        <li style="display: none"><a href="~/Areas/Api/ApiDoc/RepayWayAdd.html">添加回报</a></li>
+                        <li style="display: none"><a href="~/Areas/Api/ApiDoc/RepayWayDel.html">删除回报</a></li>
+                        <li style="display: none"><a href="~/Areas/Api/ApiDoc/RepayWayEdit.html">编辑回报</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/RepayWayConfirm.html">发起人确认开始回报</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">众筹评论操作</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/CommentAdd.html">评论众筹</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CommentEdit.html">评论回复</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/CommentList.html">评论列表</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">好友申请</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApplySearch.html">查找要申请的好友</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApply.html">提交好友申请</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApplyReply.html">被加好友方回应申请</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApplyDetails.html">查看申请者的详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApplyCheckFriend.html">查看好友状态</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApplyUserDetails.html">通过用户ID查看申请者的详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendApplyDetailList.html">通过用户名列表查询申请者的详情</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">好友操作</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendList.html">好友列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendInfoList.html">查看好友信息列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendBlackList.html">黑名单列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendChatList.html">聊天列表查询</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendDelete.html">删除好友</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendGetSetting.html">获取资料设置</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendEdit.html">编辑资料设置</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendSetNote.html">设置好友备注</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendView.html">查看好友资料</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FriendStatus.html">设置好友状态</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">通讯录</a>
+                    <ul>
+                        <li style="display: none"><a href="~/Areas/Api/ApiDoc/PhoneSync.html">同步手机联系人</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PhoneCheck.html">检查手机联系人</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">动态通知</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/DynaMsgList.html">动态通知列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/DynaMsgStatus.html">设置通知状态</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/DynaMsgUnreadMsg.html">未读消息列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/DynaMsgAdd.html">添加动态通知</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">举报</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/ReportAdd.html">添加举报</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">群组操作</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupList.html">群列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupUserList.html">群用户列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupAdd.html">新建群聊</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupDetails.html">群详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupExit.html">退群</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupEditName.html">设置群名称</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupJoinChat.html">进入项目组群聊</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GroupUploadAvatar.html">上传群头像</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">群公告</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/GNoteList.html">群公告列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GNoteAdd.html">新建群公告</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GNoteDetails.html">群详情</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/GNoteEdit.html">编辑群公告</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">账户管理</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountCenter.html">账户中心</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountList.html">账户列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountAdd.html">添加账户</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountDelete.html">删除账户</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountBankcardList.html">获取已绑定银行卡列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountBankCardInfo.html">查询银行卡信息</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/AccountGetOpenId.html">获取用户OpenId</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">资金管理</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/FundIndex.html">资金概览</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FundList.html">资金详细列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FundRecharge.html">充值</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/FundWithdraw.html">提现</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">银行相关</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/BankList.html">银行类型</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/BankJdList.html">京东银行类型</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/BankBranch.html">分支行</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">个人设置</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalSetting.html">个人设置</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalBase.html">基础信息</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalCheckAccount.html">验证是否已绑定该类型账户</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalBindAccount.html">绑定第三方账户</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalUploadAvatar.html">上传头像</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalSaveInfo.html">保存基础信息</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalChangePwd.html">密码修改</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalMobileBind.html">手机绑定</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalValidteMobile.html">验证旧手机</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalChangeMobile.html">验证并绑定新的手机</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalRealNameAuth.html">实名认证</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalCheckIDAuth.html">验证实名认证</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalFeedback.html">意见反馈</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">安全相关</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/SecurityToken.html">获取环信Token</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">消息推送设置</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/MsgSetDetails.html">获取消息推送设置</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/MsgSetSave.html">保存消息推送设置</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">系统配置</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/SysConfigServicePhone.html">服务电话</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/PersonalLinks.html">关于我们、常见问题链接</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SysConfigBugStrack.html">异常信息提交接口</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/SysConfigAppVersion.html">当前最新App版本</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/imglist.html">广告图(安卓,IOS)</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/H5imglist.html">广告图(H5)</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">环信测试</a>
+                    <ul>
+                        <li><a href="~/Areas/Api/ApiDoc/HxUsers.html">用户列表</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/HxReg.html">用户注册</a></li>
+                        <li><a href="~/Areas/Api/ApiDoc/HxAddfriend.html">添加好友</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <iframe id="mainFrame" name="mainFrame" src="~/Areas/Api/ApiDoc/instructions.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+

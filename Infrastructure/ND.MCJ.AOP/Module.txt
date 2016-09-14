@@ -1,0 +1,7 @@
+﻿Name: ND.MCJ.AOP
+Author: Percy
+Website: http://www.mochoujun.com
+Version: 1.00.0
+MCJVersion: 1.0
+Description: 日志记录，性能统计，安全控制，事务处理，异常处理等等
+Category: Infrastructure

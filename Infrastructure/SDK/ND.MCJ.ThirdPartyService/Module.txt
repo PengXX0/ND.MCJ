@@ -1,0 +1,7 @@
+﻿Name: ND.MCJ.ThirdPartyService
+Author: Percy
+Website: http://www.mochoujun.com
+Version: 1.00.0
+MCJVersion: 1.0
+Description: 短信发送、身份证认证、银行卡查询
+Category: Infrastructure

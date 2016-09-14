@@ -1,0 +1,1168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\wwwroot\www.MCJ.com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Config/Easemob.config">
+      <publishTime>05/16/2016 14:15:31</publishTime>
+    </File>
+    <File Include="App_Config/Memcached.config">
+      <publishTime>05/18/2016 10:24:25</publishTime>
+    </File>
+    <File Include="App_Config/NLog.config">
+      <publishTime>05/16/2016 13:13:10</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/css/bootstrap-theme.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/css/bootstrap-theme.css.map">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/css/bootstrap.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/css/bootstrap.css.map">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/css/css.css">
+      <publishTime>05/19/2016 16:10:49</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/css/docs.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/js/bootstrap.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/js/customer.js">
+      <publishTime>05/19/2016 14:47:49</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/js/document.js">
+      <publishTime>05/19/2016 14:48:30</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/js/jquery.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/js/modal.js">
+      <publishTime>05/17/2016 18:22:39</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/js/zepto.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/.gitignore">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/bower.json">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/css/jquery-confirm.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/css/jquery-confirm.less">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/demo.min.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/demo.min.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/fontawesome-webfont.eot">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/fontawesome-webfont.svg">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/fontawesome-webfont.woff">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/FontAwesome.otf">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/bootstrap-theme.min.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/bootstrap.min.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/bootstrap.min.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/default.min.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/font-awesome.min.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/highlight.min.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/jquery.min.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/libs/pretty.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/demo/logo-name.svg">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/dist/jquery-confirm.min.css">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/dist/jquery-confirm.min.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/form.txt">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/index.html">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/jquery-confirm.png">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/js/jquery-confirm.js">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/LICENSE">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/package.json">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/README.md">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/table.html">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/jquery.confirm/text.txt">
+      <publishTime>05/17/2016 18:17:09</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/json.formater/json.formater.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/json.formater/json.formater.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/anchor/anchor.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/attachment.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/attachment.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/attachment.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_default.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/alignicon.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/alignicon.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/bg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/file-icons.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/file-icons.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/icons.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/icons.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/image.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/progress.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/success.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/attachment/images/success.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/background/background.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/background/background.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/background/background.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/background/images/bg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/background/images/success.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/chart.config.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/charts.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/charts.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/charts.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/images/charts0.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/images/charts1.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/images/charts2.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/images/charts3.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/images/charts4.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/charts/images/charts5.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/emotion.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/emotion.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/emotion.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/0.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/bface.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/cface.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/fface.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/jxface2.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/neweditor-tab-bg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/tface.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/wface.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/emotion/images/yface.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/gmap/gmap.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/help/help.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/help/help.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/help/help.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/image.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/image.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/image.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/alignicon.jpg">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/bg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/icons.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/icons.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/image.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/progress.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/success.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/image/images/success.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/insertframe/insertframe.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/internal.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/link/link.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/map/map.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/map/show.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/music/music.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/music/music.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/music/music.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/preview/preview.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/addimg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/brush.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/delimg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/delimgH.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/empty.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/emptyH.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/eraser.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/redo.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/redoH.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/scale.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/scaleH.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/size.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/undo.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/images/undoH.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/scrawl.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/scrawl.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/scrawl/scrawl.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/searchreplace/searchreplace.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/searchreplace/searchreplace.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/snapscreen/snapscreen.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/spechars/spechars.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/spechars/spechars.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/table/dragicon.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/table/edittable.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/table/edittable.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/table/edittable.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/table/edittd.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/table/edittip.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/config.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/images/bg.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/images/pre0.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/images/pre1.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/images/pre2.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/images/pre3.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/images/pre4.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/template.css">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/template.html">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/template/template.js">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/bg.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/center_focus.jpg">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/file-icons.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/file-icons.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/icons.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/icons.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/image.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/left_focus.jpg">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/none_focus.jpg">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/progress.png">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/right_focus.jpg">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/success.gif">
+      <publishTime>05/17/2016 18:17:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/images/success.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/video.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/video.html">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/video/video.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/webapp/webapp.html">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/wordimage/fClipboard_ueditor.swf">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/wordimage/imageUploader.swf">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/wordimage/tangram.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/wordimage/wordimage.html">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/dialogs/wordimage/wordimage.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/index.html">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/en.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/addimage.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/alldeletebtnhoverskin.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/alldeletebtnupskin.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/background.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/button.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/copy.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/deletedisable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/deleteenable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/listbackground.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/localimage.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/music.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/rotateleftdisable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/rotateleftenable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/rotaterightdisable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/rotaterightenable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/en/images/upload.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/zh-cn/images/copy.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/zh-cn/images/localimage.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/zh-cn/images/music.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/zh-cn/images/upload.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/lang/zh-cn/zh-cn.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/css/ueditor.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/css/ueditor.min.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/dialogbase.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/anchor.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/arrow.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/arrow_down.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/arrow_up.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/button-bg.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/cancelbutton.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/charts.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/cursor_h.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/cursor_h.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/cursor_v.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/cursor_v.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/dialog-title-bg.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/filescan.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/highlighted.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/icons-all.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/icons.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/icons.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/loaderror.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/loading.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/lock.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/neweditor-tab-bg.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/pagebreak.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/scale.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/sortable.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/spacer.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/sparator_v.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/table-cell-align.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/tangram-colorpicker.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/toolbar_bg.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/unhighlighted.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/upload.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/videologo.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/word.gif">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/default/images/wordpaste.png">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/themes/iframe.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/codemirror/codemirror.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/codemirror/codemirror.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/adapters/mootools-adapter.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/adapters/prototype-adapter.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/adapters/standalone-framework.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/adapters/standalone-framework.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/highcharts-more.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/highcharts-more.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/highcharts.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/highcharts.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/annotations.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/annotations.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/canvas-tools.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/canvas-tools.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/data.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/data.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/drilldown.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/drilldown.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/exporting.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/exporting.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/funnel.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/funnel.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/heatmap.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/heatmap.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/map.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/map.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/no-data-to-display.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/modules/no-data-to-display.src.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/themes/dark-blue.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/themes/dark-green.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/themes/gray.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/themes/grid.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/highcharts/themes/skies.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/jquery-1.10.2.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/jquery-1.10.2.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/jquery-1.10.2.min.map">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/snapscreen/UEditorSnapscreen.exe">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/SyntaxHighlighter/shCore.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/font/vjs.eot">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/font/vjs.svg">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/font/vjs.ttf">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/font/vjs.woff">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/video-js.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/video-js.min.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/video-js.swf">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/video.dev.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/video-js/video.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/Uploader.swf">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.css">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.custom.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.custom.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.flashonly.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.flashonly.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.html5only.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.html5only.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.withoutimage.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/webuploader/webuploader.withoutimage.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/zeroclipboard/ZeroClipboard.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/third-party/zeroclipboard/ZeroClipboard.swf">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/ueditor.all.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/ueditor.all.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/ueditor.config.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/ueditor.parse.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/dist/plugs/ueditor/ueditor.parse.min.js">
+      <publishTime>05/17/2016 18:17:07</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/html/EditAPI.html">
+      <publishTime>05/17/2016 22:04:11</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/html/HomeIndex.html">
+      <publishTime>05/19/2016 16:11:04</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/html/Instructions.html">
+      <publishTime>05/19/2016 16:11:11</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/html/RequestModel.html">
+      <publishTime>05/19/2016 16:11:18</publishTime>
+    </File>
+    <File Include="Areas/Help/Document/html/ResponseModel.html">
+      <publishTime>05/19/2016 16:11:23</publishTime>
+    </File>
+    <File Include="Areas/Help/Views/Dev/Debug.cshtml">
+      <publishTime>05/18/2016 14:21:11</publishTime>
+    </File>
+    <File Include="Areas/Help/Views/Dev/Docs.cshtml">
+      <publishTime>05/17/2016 22:16:19</publishTime>
+    </File>
+    <File Include="Areas/Help/Views/Shared/_Layout.cshtml">
+      <publishTime>05/13/2016 16:54:17</publishTime>
+    </File>
+    <File Include="Areas/Help/Views/Web.config">
+      <publishTime>05/17/2016 18:27:06</publishTime>
+    </File>
+    <File Include="Areas/Help/Views/_ViewStart.cshtml">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>05/13/2016 22:39:36</publishTime>
+    </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>05/19/2016 11:38:27</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>05/19/2016 11:38:27</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.WebApi.dll">
+      <publishTime>05/19/2016 11:38:27</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/19/2016 11:38:27</publishTime>
+    </File>
+    <File Include="bin/Enyim.Caching.dll">
+      <publishTime>05/19/2016 11:38:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>05/13/2016 22:28:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>05/13/2016 22:31:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/08/2013 15:15:08</publishTime>
+    </File>
+    <File Include="bin/NC.MCJ.WebApi.dll">
+      <publishTime>05/19/2016 16:48:02</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.AOP.dll">
+      <publishTime>05/19/2016 16:48:00</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.DataContext.dll">
+      <publishTime>05/19/2016 16:48:00</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.Framework.dll">
+      <publishTime>05/19/2016 16:47:00</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.IOC.dll">
+      <publishTime>05/19/2016 16:48:01</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.IRepository.dll">
+      <publishTime>05/19/2016 16:48:00</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.IService.dll">
+      <publishTime>05/19/2016 16:48:01</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.Model.dll">
+      <publishTime>05/19/2016 16:47:59</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.Repository.dll">
+      <publishTime>05/19/2016 16:48:01</publishTime>
+    </File>
+    <File Include="bin/ND.MCJ.Service.dll">
+      <publishTime>05/19/2016 16:48:01</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/02/2013 12:10:10</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>05/19/2016 11:38:31</publishTime>
+    </File>
+    <File Include="bin/ServiceStack.Text.dll">
+      <publishTime>05/19/2016 11:38:30</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/10/2012 12:07:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/10/2012 12:07:38</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>05/13/2016 22:36:45</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/09/2013 11:05:10</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.OData.dll">
+      <publishTime>05/13/2016 22:27:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Tracing.dll">
+      <publishTime>05/13/2016 22:27:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/19/2016 11:38:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/13/2016 22:26:55</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>05/13/2016 22:26:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/09/2013 11:05:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/09/2013 11:05:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/09/2013 11:05:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/09/2013 11:05:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/13/2016 22:39:36</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>07/09/2013 11:34:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/09/2013 11:34:40</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>07/09/2013 11:36:02</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>05/13/2016 16:46:05</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>07/09/2013 11:35:48</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>07/09/2013 11:36:04</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>07/09/2013 11:35:56</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>07/09/2013 11:35:56</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/18/2016 14:29:13</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/17/2016 22:20:32</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/13/2016 16:54:13</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/19/2016 16:48:16</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

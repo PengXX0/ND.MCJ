@@ -1,0 +1,6 @@
+obj
+App_Data
+App_Log
+bin
+packages
+/Gulpfile/node_modules

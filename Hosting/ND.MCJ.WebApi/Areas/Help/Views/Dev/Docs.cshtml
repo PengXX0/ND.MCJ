@@ -1,0 +1,32 @@
+﻿@{Layout = null;}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>接口文档</title>
+    @Styles.Render("~/Content/style/")
+    @Scripts.Render("~/bundles/script")
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="javascript:;">APP调用基本说明</a>
+                    <ul>
+                        <li><a href="~/Areas/Help/Document/html/Instructions.html">调用提示</a></li>
+                        <li><a href="~/Areas/Help/Document/html/RequestModel.html">请求基类：RequestModel</a></li>
+                        <li><a href="~/Areas/Help/Document/html/ResponseModel.html">返回基类：ResponseModel</a></li>
+                        <li><a href="~/Areas/Help/Document/html/EditAPI.html">编辑接口参数文档</a></li>
+                    </ul>
+                </li>
+                <li><a href="~/Areas/Help/Document/html/HomeIndex.html">APP首页</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <iframe id="mainFrame" name="mainFrame" src="~/Areas/Help/Document/html/Instructions.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+

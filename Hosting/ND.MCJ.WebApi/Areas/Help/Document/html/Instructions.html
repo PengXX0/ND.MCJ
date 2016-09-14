@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>APP接口调用说明</title>
+    <link href="../dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../dist/css/css.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="col-md-10 doc-wrapper" role="main">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>众筹APP调用提示</h4>
+            </div>
+            <div class="panel-body">
+                传入参数：RequestBase，具有UserID、Sign、Token、Platform四个基本属性，其它请根据要求（必填或可选)传递。<br />
+                签名要求：具体查看传入参数类中的说明进行签名，有的需要<strong>请求参数+公钥</strong>，有的仅需要<strong>公钥</strong>签名，签名方式：<strong>MD5-UTF8</strong>。<br />
+                输出参数：继承自ResponseBase基类，具有Code、Massage、Data三个基本属性，其它请查看具体说明。<br />
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>签名规则 (Sign参数的取值)</h4>
+            </div>
+            <div class="panel-body">
+                第一步：根据传入的参数<strong>（Sign参数除外）</strong> 按照ASCII码顺序排列。<br />
+                第二步：将排列好的参数取值，中间用 <strong>| (竖杠)</strong> 分开。如：aaaa|1|23。<br />
+                第三步：将第二步得到的值加上 AppKey 通过MD5-UTF8加密。<br />
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>AppKey</h4>
+            </div>
+            <div class="panel-body">
+                测试环境：<strong>~!N@D#Z*</strong><br />
+                生产环境：<strong>上线之前更换</strong><br />
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>接口访问说明</h4>
+            </div>
+            <div class="panel-body">
+                测试环境：Host：192.168.1.200 <a href="http://www.mochoujun.com/" target="_blank"><strong>www.mochoujun.com</strong></a><br />
+                生产环境：
+            </div>
+        </div>
+    </div>
+</body>
+</html>

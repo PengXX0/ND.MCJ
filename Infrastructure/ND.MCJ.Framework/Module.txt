@@ -1,0 +1,7 @@
+﻿Name: ND.MCJ.Framework
+Author: Percy
+Website: http://www.mochoujun.com
+Version: 1.00.0
+MCJVersion: 1.0
+Description: 各种通用的方法，获取当前IP，当前请求参数、系统信息、通用的配置文件等等，对当前系统没有依赖
+Category: Infrastructure
