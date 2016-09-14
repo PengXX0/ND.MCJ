@@ -20,7 +20,9 @@ namespace ND.MCJ.Framework
             get
             {
                 var machineIP = String.Empty;
-                machineIP = Dns.GetHostAddresses(Dns.GetHostName()).Where(ip => ip.AddressFamily == AddressFamily.InterNetwork).Aggregate(machineIP, (current, ip) => current + (ip + "; "));
+                machineIP = Dns.GetHostAddresses(Dns.GetHostName())
+                    .Where(ip => ip.AddressFamily == AddressFamily.InterNetwork)
+                    .Aggregate(machineIP, (current, ip) => current + (ip + "; "));
                 return machineIP.EndsWith("; ") ? machineIP.Substring(0, machineIP.Length - 2) : machineIP;
             }
         }
@@ -38,6 +40,5 @@ namespace ND.MCJ.Framework
                 return result;
             }
         }
-
     }
 }

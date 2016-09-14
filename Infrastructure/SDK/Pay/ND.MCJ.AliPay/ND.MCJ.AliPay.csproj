@@ -7,8 +7,8 @@
     <ProjectGuid>{26B78DE3-B1CC-4BCF-A5F8-A0528046B08D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ND.MCJ.AliPay</RootNamespace>
-    <AssemblyName>ND.MCJ.AliPay</AssemblyName>
+    <RootNamespace>ND.MCJ.Alipay</RootNamespace>
+    <AssemblyName>ND.MCJ.Alipay</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

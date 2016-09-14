@@ -20,7 +20,6 @@ namespace NC.MCJ.WebApi.Areas.Help.Controllers
     /// </summary>
     public class DevController : Controller
     {
-
         #region 开发调试
         public ActionResult Docs()
         {
@@ -85,12 +84,10 @@ namespace NC.MCJ.WebApi.Areas.Help.Controllers
             if (!System.IO.File.Exists(filePath)) { return Content("文件不存在"); }
             if (type == 0)
             {
-                using (var stream = new FileStream(filePath, FileMode.Open))
-                {
-                    var bytes = new byte[stream.Length];
-                    stream.Read(bytes, 0, bytes.Length);
-                    return Content(Encoding.Default.GetString(bytes), "text/plain");
-                }
+                var stream = new FileStream(filePath, FileMode.Open);
+                var bytes = new byte[stream.Length];
+                stream.Read(bytes, 0, bytes.Length); stream.Dispose();
+                return Content(Encoding.Default.GetString(bytes), "text/plain");
             }
             Response.ClearContent(); Response.Clear();
             Response.ContentType = "application/octet-stream";

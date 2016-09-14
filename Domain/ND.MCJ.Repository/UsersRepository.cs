@@ -1,5 +1,5 @@
 ﻿using ND.MCJ.DataProvider;
-using ND.MCJ.DataProvider.OrmLite;
+using ND.MCJ.DataProvider.EntityFramework;
 using ND.MCJ.IRepository;
 using ND.MCJ.Model;
 using System;

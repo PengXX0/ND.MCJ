@@ -15,7 +15,7 @@ namespace ND.MCJ.AOP.Tests
         [TestMethod]
         public void TestNLog()
         {
-            Logger.Initialize(ConfigurationManager.AppSettings["NLogConfig"]);
+            Logger.Start(ConfigurationManager.AppSettings["NLogConfig"]);
             var content = "测试测试";
             Logger.Error(content);
             Assert.IsNotNull(content);

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ND.MCJ.DataProvider;
+﻿using ND.MCJ.DataProvider;
 using ND.MCJ.Model;
 
-namespace ND.MCJ.AdminService.Interface
+namespace ND.MCJ.AdminWebService.Interface
 {
     public interface IUsersService : IDependency
     {

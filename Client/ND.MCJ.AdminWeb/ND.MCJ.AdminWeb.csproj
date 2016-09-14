@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\Bootstrapper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -324,6 +325,10 @@
     <ProjectReference Include="..\..\Infrastructure\ND.MCJ.IOC\ND.MCJ.IOC.csproj">
       <Project>{72702e3d-1d1f-476d-911b-b3a45e028ef5}</Project>
       <Name>ND.MCJ.IOC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\SDK\ND.MCJ.Wechat\ND.MCJ.Wechat.csproj">
+      <Project>{a1c9442a-7110-4ae5-ab59-597d5f3a6803}</Project>
+      <Name>ND.MCJ.Wechat</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -1,7 +1,13 @@
-﻿using ND.MCJ.AOP;
+﻿using ND.MCJ.AOP.Caching;
 using ND.MCJ.AOP.Logging;
 using ND.MCJ.IOC;
+using System;
 using System.Collections.Specialized;
+using System.Configuration;
+using System.Web.Mvc;
+using System.Web.Optimization;
+using ND.MCJ.Wechat;
+using ND.MCJ.Tenpay;
 
 namespace NC.MCJ.WebApi
 {
@@ -13,8 +19,11 @@ namespace NC.MCJ.WebApi
         public static void Register(NameValueCollection config)
         {
             AutofacResolver.Register();
-            Logger.Initialize(config["NLogConfig"]);
-            Memcached.Initialize(config["MemcachedConfig"]);
+            MvcHandler.DisableMvcResponseHeader = true;
+            Logger.Start(config["NLogConfig"]);
+            Memcached.Start(config["MemcachedConfig"]);
+            WechatMain.Start(config["TenpayConfig"]);
+            TenpayMain.Start(config["TenpayConfig"]);
         }
     }
 }

@@ -14,7 +14,6 @@ namespace ND.MCJ.DataProvider
         {
             Rows = items;
             PageSize = pageSize;
-            //RecordCount = items.Count;
             PageIndex = pageIndex;
         }
 

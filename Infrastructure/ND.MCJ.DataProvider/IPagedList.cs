@@ -11,7 +11,7 @@ namespace ND.MCJ.DataProvider
         /// 当前页数据条数
         /// </summary>
         int CurrentCount { get; set; }
-        int PageCount { get;  }
+        int PageCount { get; }
         /// <summary>
         /// 页码
         /// </summary>
@@ -27,7 +27,7 @@ namespace ND.MCJ.DataProvider
         /// <summary>
         /// 当前页数据结束序号
         /// </summary>
-        int EndIndex { get;  }
+        int EndIndex { get; }
         /// <summary>
         /// 当前页数据集
         /// </summary>

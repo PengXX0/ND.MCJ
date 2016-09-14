@@ -140,7 +140,7 @@ namespace ND.MCJ.DataProvider.EntityFramework
             {
                 pageIndex = pageIndex < 1 ? 1 : pageIndex;
                 pageSize = pageSize <= 1 ? 1 : pageSize;
-                sql = sql.AppendFormat(@"SELECT *  FROM ( SELECT  Row_Number() over ({4}) AS _RowID, {0} FROM {1} {2} {3} ) AS T 
+                sql = sql.AppendFormat(@"SELECT *  FROM ( SELECT  Row_Number() OVER ({4}) AS _RowID, {0} FROM {1} {2} {3} ) AS T 
                                                    WHERE T._RowID > (({6} - 1) * {5})  AND T._RowID <= ({6} * {5})  
                                                    ORDER BY _RowID ASC;", selectBody, selectTable, where, group, sort, pageSize, pageIndex);
             }

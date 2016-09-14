@@ -42,7 +42,7 @@ namespace ND.MCJ.AOP.Logging
         {
             var builder = new StringBuilder().Append(Environment.NewLine)
             .Append("Caption:     ").Append(caption).Append(Environment.NewLine).Append(BaseBuilder)
-            .Append("UrlReferrer:   ").Append(RequestHelper.UrlReferrer).Append(Environment.NewLine)
+            .Append("UrlReferrer: ").Append(RequestHelper.UrlReferrer).Append(Environment.NewLine)
             .Append("Cookies:     ").Append(HttpUtility.UrlDecode(RequestHelper.Cookies.ToJson()).Replace("\r\n", "|")).Append(Environment.NewLine)
             .Append("Exception:   ").Append(ex).Append(Environment.NewLine)
             .Append("-------------------------------------------------------------------------------");
@@ -57,7 +57,7 @@ namespace ND.MCJ.AOP.Logging
         public static void Debug(Object response, String caption)
         {
             var builder = new StringBuilder().Append(Environment.NewLine)
-            .Append("Caption:     ").Append(caption).Append(Environment.NewLine).Append(BaseBuilder)
+            .Append("Caption:    ").Append(caption).Append(Environment.NewLine).Append(BaseBuilder)
             .Append("Response:   ").Append(response.ToJson()).Append(Environment.NewLine)
             .Append("-------------------------------------------------------------------------------");
             Logger.Error(HttpUtility.UrlDecode(builder.ToString()));
@@ -74,8 +74,8 @@ namespace ND.MCJ.AOP.Logging
                 .Append("ServerIP:    ").Append(RequestHelper.ServerIP).Append(Environment.NewLine)
                 .Append("RemoteIP:    ").Append(RequestHelper.RemoteIP).Append(Environment.NewLine)
                 .Append("UserAgent:   ").Append(RequestHelper.UserAgent).Append(Environment.NewLine)
-                .Append("Request:     ").Append(RequestHelper.Request.ToString()).Append(Environment.NewLine)
-                .Append("Parameter:     ").Append(RequestHelper.Parameters.ToString()).Append(Environment.NewLine)
+                .Append("Request:     ").Append(RequestHelper.Request).Append(Environment.NewLine)
+                .Append("Parameter:   ").Append(RequestHelper.Parameters).Append(Environment.NewLine)
                 .Append("AbsoluteUri: ").Append(RequestHelper.AbsoluteUri).Append(Environment.NewLine);
             }
         }

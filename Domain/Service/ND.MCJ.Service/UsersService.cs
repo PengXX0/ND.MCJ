@@ -13,7 +13,7 @@ namespace ND.MCJ.WebAPIService
         {
             _usersRepository = usersRepository;
         }
-        // [TransactionMethod]
+
         public Users GetUser(int userId)
         {
             return _usersRepository.Find(userId);

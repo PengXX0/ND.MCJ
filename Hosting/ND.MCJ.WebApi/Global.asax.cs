@@ -27,9 +27,7 @@ namespace NC.MCJ.WebApi
         }
 
         protected void Application_Error(object sender, EventArgs e)
-        {
-            Log.Global(Server.GetLastError());
-        }
+        { Log.Global(Server.GetLastError()); }
     }
 
 }

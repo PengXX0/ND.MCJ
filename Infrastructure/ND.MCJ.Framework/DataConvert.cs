@@ -11,12 +11,12 @@ namespace ND.MCJ.Framework
 {
     public static class DataConvert
     {
-        public static string ToJson<T>(this T obj)
+        public static String ToJson<T>(this T obj)
         {
             return JsonConvert.SerializeObject(obj);
         }
 
-        public static T ToDataFromJson<T>(this string obj)
+        public static T ToDataFromJson<T>(this String obj)
         {
             return JsonConvert.DeserializeObject<T>(obj);
         }
@@ -41,7 +41,7 @@ namespace ND.MCJ.Framework
             return modelState.First(m => m.Value.Errors.Any()).Value.Errors.First(s => s.ErrorMessage.Any()).ErrorMessage;
         }
 
-        public static string ToQueryString(this IDictionary<String, String> dic)
+        public static String ToQueryString(this IDictionary<String, String> dic)
         {
             return dic.Aggregate("", (current, i) => current + (i.Key + "=" + i.Value + "&")).TrimEnd('&');
         }
@@ -51,18 +51,16 @@ namespace ND.MCJ.Framework
             return (from int s in Enum.GetValues(typeof(T)) select new SelectListItem { Value = s.ToString(), Text = Enum.GetName(typeof(T), s) }).ToList();
         }
 
-
-
         #region 转Dictionary
         /// <summary>
         /// Xml转Dictionary
         /// </summary>
         /// <param name="doc"></param>
         /// <returns></returns>
-        public static IDictionary<string, object> XmlToDictionary(this XmlDocument doc)
+        public static IDictionary<String, Object> XmlToDictionary(this XmlDocument doc)
         {
             var json = JsonConvert.SerializeXmlNode(doc);
-            return JsonConvert.DeserializeObject<IDictionary<string, object>>(json);
+            return JsonConvert.DeserializeObject<IDictionary<String, Object>>(json);
         }
 
         /// <param name="nvc"></param>
@@ -71,11 +69,11 @@ namespace ND.MCJ.Framework
         public static IDictionary<String, String> ToDictionary(this NameValueCollection nvc, bool handleMultipleValuesPerKey)
         {
             var result = new Dictionary<String, String>();
-            foreach (string key in nvc.Keys)
+            foreach (String key in nvc.Keys)
             {
                 if (handleMultipleValuesPerKey)
                 {
-                    string[] values = nvc.GetValues(key);
+                    String[] values = nvc.GetValues(key);
                     if (values != null && values.Length == 1)
                     {
                         result.Add(key, values[0]);
@@ -98,9 +96,9 @@ namespace ND.MCJ.Framework
         /// </summary>
         /// <param name="json"></param>
         /// <returns></returns>
-        public static IDictionary<string, object> ToDictionary(this string json)
+        public static IDictionary<String, Object> ToDictionary(this String json)
         {
-            return JsonConvert.DeserializeObject<IDictionary<string, object>>(json);
+            return JsonConvert.DeserializeObject<IDictionary<String, Object>>(json);
         }
 
         /// <summary>
@@ -108,9 +106,9 @@ namespace ND.MCJ.Framework
         /// </summary>
         /// <param name="queryString"></param>
         /// <returns></returns>
-        public static IDictionary<String, Object> QuertStringToDictionary(string queryString)
+        public static IDictionary<String, Object> QuertStringToDictionary(String queryString)
         {
-            return queryString.Split('&').Select(item => item.Split('=')).ToDictionary<string[], string, object>(args => args[0], args => args[1]);
+            return queryString.Split('&').Select(item => item.Split('=')).ToDictionary<String[], String, Object>(args => args[0], args => args[1]);
         }
         #endregion
     }

@@ -19,8 +19,8 @@ namespace NC.MCJ.WebApi.Controllers
         }
 
         // GET api/user
-        [ExceptionAttribute(Caption = "用户列表")]
         [AllowAnonymous]
+        [ExceptionAttribute(Caption = "用户列表")]
         //[Route("orders/{id}")]
         public Object Get(string mobile, int pageSize, int pageIndex)
         {

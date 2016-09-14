@@ -17,7 +17,7 @@ namespace ND.MCJ.AOP.Logging
 
         public static XmlLoggingConfiguration LogConfig { get; private set; }
 
-        public static void Initialize(string filePath)
+        public static void Start(string filePath)
         {
             filePath = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory + filePath);
             LogConfig = new XmlLoggingConfiguration(filePath);

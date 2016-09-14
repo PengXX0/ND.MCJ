@@ -88,7 +88,6 @@ namespace ND.MCJ.Framework
             return GetCollection(filePath)[key].Value;
         }
 
-
         /// <summary>
         /// 取得appSettings里的值列表
         /// </summary>
@@ -142,5 +141,4 @@ namespace ND.MCJ.Framework
             return ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = path }, ConfigurationUserLevel.None);
         }
     }
-
 }

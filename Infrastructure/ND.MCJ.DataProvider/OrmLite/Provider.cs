@@ -21,19 +21,19 @@ namespace ND.MCJ.DataProvider.OrmLite
 
         public T Update<T>(T entity) where T : BaseModel, new()
         {
-            Run(db => db.Update<T>(entity));
+            Run(db => db.Update(entity));
             return entity;
             //return Run<int>(db => db.ExecuteNonQuery(new InternalSqlExpressionVisitor<T>().ToUpdateStatement(entity, true)));
         }
 
         public long Count<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
         {
-            return Run(db => db.Count<T>(conditions));
+            return Run(db => db.Count(conditions));
         }
 
         public T FirstOrDefault<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
         {
-            return Run(db => db.FirstOrDefault<T>(conditions));
+            return Run(db => db.FirstOrDefault(conditions));
         }
 
         public T FirstOrDefault<T>(String sql, params Object[] parameters) where T : BaseModel, new()
@@ -43,28 +43,28 @@ namespace ND.MCJ.DataProvider.OrmLite
 
         public T First<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
         {
-            return Run(db => db.First<T>(conditions));
+            return Run(db => db.First(conditions));
         }
 
         public T Delete<T>(T entity) where T : BaseModel, new()
         {
-            Run(db => db.Delete<T>(entity));
+            Run(db => db.Delete(entity));
             return entity;
         }
 
         public T Insert<T>(T entity) where T : BaseModel, new()
         {
-            var identityId = Run<long>(db => db.InsertParam<T>(entity, true));
-            return Run<T>(db => db.GetByIdParam<T>(identityId));
+            var identityId = Run(db => db.InsertParam(entity, true));
+            return Run(db => db.GetByIdParam<T>(identityId));
         }
 
         public T Find<T>(object id) where T : BaseModel, new()
         {
-            return Run<T>(db => db.GetByIdParam<T>(id));
+            return Run(db => db.GetByIdParam<T>(id));
         }
         public List<T> FindAll<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
         {
-            return Run(db => db.Where<T>(conditions));
+            return Run(db => db.Where(conditions));
         }
 
         public IEnumerable SqlQuery<T>(String sql, params Object[] parameters)
@@ -110,27 +110,27 @@ namespace ND.MCJ.DataProvider.OrmLite
                 throw new Exception("from body can not be null");
             var where = new StringBuilder();
             if (String.IsNullOrEmpty(whereBody) == false)
-            { where = where.AppendFormat(" where {0} ", whereBody); }
+            { where = where.AppendFormat(" WHERE {0} ", whereBody); }
             var sort = new StringBuilder();
             if (String.IsNullOrEmpty(sortBody) == false)
-            { sort = sort.AppendFormat((" order by {0} " + (isDesc ? " desc " : " asc ")), sortBody); }
+            { sort = sort.AppendFormat((" ORDER BY {0} " + (isDesc ? " DESC " : " ASC ")), sortBody); }
             var group = new StringBuilder();
             if (String.IsNullOrEmpty(groupBody) == false)
-            { group = group.AppendFormat(" group by {0}", groupBody); }
-            StringBuilder sql = new StringBuilder();
+            { group = group.AppendFormat(" GROUP BY {0} ", groupBody); }
+            var sql = new StringBuilder();
             var countSql = new StringBuilder().AppendFormat("SELECT COUNT(1) FROM {0} {1}", selectTable, where);
-            var recordCount = Provider.Run(db => db.Scalar<int>(countSql.ToString()));
+            var recordCount = Run(db => db.Scalar<int>(countSql.ToString()));
             if (pageIndex == -1)
             { sql = sql.AppendFormat(" SELECT {0} FROM {1} {2} {3} {4}", selectBody, selectTable, where, group, sort); }
             else
             {
                 pageIndex = pageIndex < 1 ? 1 : pageIndex;
                 pageSize = pageSize <= 1 ? 1 : pageSize;
-                sql = sql.AppendFormat(@"SELECT *  FROM ( SELECT  Row_Number() over ({4}) AS _RowID, {0} FROM {1} {2} {3} ) AS T 
+                sql = sql.AppendFormat(@"SELECT *  FROM ( SELECT  Row_Number() OVER ({4}) AS _RowID, {0} FROM {1} {2} {3} ) AS T 
                                                    WHERE T._RowID > (({6} - 1) * {5})  AND T._RowID <= ({6} * {5})  
                                                    ORDER BY _RowID ASC;", selectBody, selectTable, where, group, sort, pageSize, pageIndex);
             }
-            var list = Provider.Run(db => db.Select<T>(sql.ToString()));
+            var list = Run(db => db.Select<T>(sql.ToString()));
             return new PagedList<T>(list, pageIndex, pageSize, recordCount);
         }
 
@@ -146,7 +146,7 @@ namespace ND.MCJ.DataProvider.OrmLite
         public static void DoDBTrans(Action<IDbConnection> action)
         {
             IDbTransaction newDBTran = null;
-            IDbConnection newDBConn = _db.CreateDbConnection();
+            IDbConnection newDBConn = Db.CreateDbConnection();
             newDBConn.Open();
             try
             {

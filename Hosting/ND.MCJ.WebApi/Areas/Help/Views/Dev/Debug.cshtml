@@ -65,11 +65,14 @@
             <hr />
             <div class="form-group">
                 <label for="inputText3" class="col-sm-2 control-label">响应</label>
-                <input type="hidden" name="response"  />
+                <input type="hidden" name="response" />
                 <div class="col-sm-10 response" data-json="@Model.Response">
                 </div>
             </div>
         </form>
     </div>
+    <script type="application/json">
+        var json=@Html.Raw(Model.Response);
+    </script>
 </body>
 </html>

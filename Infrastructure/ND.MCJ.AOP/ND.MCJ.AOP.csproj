@@ -66,10 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Caching\MemoryCache.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Logging\Log.cs" />
-    <Compile Include="Memcached.cs" />
+    <Compile Include="Caching\Memcached.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\MvcFilter\JsonNetAttribute.cs" />
     <Compile Include="Security\MvcFilter\ExceptionAttribute.cs" />

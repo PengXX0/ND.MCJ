@@ -63,9 +63,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\NLog.4.3.3\lib\net40\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
-    </Reference>
     <Reference Include="ServiceStack.Text">
       <HintPath>..\..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
@@ -176,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AttributeRoutingHttpConfig.cs" />
+    <Compile Include="App_Start\Bootstrapper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -505,7 +503,9 @@
     <Content Include="Areas\Help\Views\Shared\_Layout.cshtml" />
     <Content Include="App_Config\NLog.config" />
     <Content Include="App_Config\Easemob.config" />
-    <Content Include="App_Config\Memcached.config" />
+    <Content Include="App_Config\Memcached.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Help\Views\Dev\Docs.cshtml" />
     <Content Include="Areas\Help\Views\Dev\Debug.cshtml" />
     <Content Include="Areas\Help\Document\dist\css\bootstrap-theme.css.map" />
@@ -582,8 +582,22 @@
       <Project>{72702e3d-1d1f-476d-911b-b3a45e028ef5}</Project>
       <Name>ND.MCJ.IOC</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\SDK\ND.MCJ.Wechat\ND.MCJ.Wechat.csproj">
+      <Project>{a1c9442a-7110-4ae5-ab59-597d5f3a6803}</Project>
+      <Name>ND.MCJ.Wechat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\SDK\Pay\ND.MCJ.Tenpay\ND.MCJ.Tenpay.csproj">
+      <Project>{2b09ee1c-a1fd-4850-a5e9-6c4d4b8deb4e}</Project>
+      <Name>ND.MCJ.Tenpay</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Tenpay.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\JdPay.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\www.MCJ.com.pubxml" />
   </ItemGroup>
   <PropertyGroup>

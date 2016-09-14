@@ -1,32 +1,104 @@
-//npm install webpack gulp-clean-css gulp-concat gulp-uglify gulp-rename del --save-dev
-var gulp = require('gulp'),
-    minifycss = require('gulp-minify-css'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    del = require('del');
+//npm install gulp-htmlmin gulp-imagemin imagemin-pngcrush gulp-minify-css gulp-jshint gulp-uglify gulp-concat gulp-rename gulp-notify gulp-base64 --save-dev
+// ÒıÈë gulp
+var gulp = require('gulp');
 
+// ÒıÈë×é¼ş
+var htmlmin = require('gulp-htmlmin'), //htmlÑ¹Ëõ
+    imagemin = require('gulp-imagemin'),//Í¼Æ¬Ñ¹Ëõ
+    base64 = require('gulp-base64'),//Í¼Æ¬×ªbase64
+    pngcrush = require('imagemin-pngcrush'),
+    minifycss = require('gulp-minify-css'),//cssÑ¹Ëõ
+    jshint = require('gulp-jshint'),//js¼ì²â
+    uglify = require('gulp-uglify'),//jsÑ¹Ëõ
+    concat = require('gulp-concat'),//ÎÄ¼şºÏ²¢
+    rename = require('gulp-rename'),//ÎÄ¼ş¸üÃû
+    notify = require('gulp-notify');//ÌáÊ¾ĞÅÏ¢
 
-gulp.task('minifycss', function () {
-    return gulp.src(['../Hosting/**/Document/dist/css/*.css'])      //å‹ç¼©çš„æ–‡ä»¶ 
-        .pipe(rename({ suffix: '.min' }))   //renameå‹ç¼©åçš„æ–‡ä»¶å
-        .pipe(minifycss())   //æ‰§è¡Œå‹ç¼©
-        .pipe(gulp.dest('../minified/css'));   //è¾“å‡ºæ–‡ä»¶å¤¹
+// Ñ¹Ëõhtml
+gulp.task('html', function () {
+    return gulp.src('src/*.html')
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest('./dest'))
+      .pipe(notify({ message: 'html task ok' }));
+
 });
 
-gulp.task('minifyjs', function () {
-    return gulp.src(['../Hosting/**/Document/dist/js/*.js'])
-        .pipe(concat('main.js'))    //åˆå¹¶æ‰€æœ‰jsåˆ°main.js
-        .pipe(rename({ suffix: '.min' }))   //renameå‹ç¼©åçš„æ–‡ä»¶å
-        .pipe(uglify())    //å‹ç¼©
-        .pipe(gulp.dest('../minified/js'));  //è¾“å‡º
+// Ñ¹ËõÍ¼Æ¬
+gulp.task('img', function () {
+    return gulp.src('src/images/*')
+      .pipe(imagemin({
+          progressive: true,
+          svgoPlugins: [{ removeViewBox: false }],
+          use: [pngcrush()]
+      }))
+      .pipe(gulp.dest('./dest/images/'))
+      .pipe(notify({ message: 'img task ok' }));
 });
 
-gulp.task('clean', function (cb) {
-    del(['../minified/css', '../minified/js'], cb);
-    gulp.start('minifycss', 'minifyjs');
+
+
+var config = {
+    src: developmentAssets + '/css/*.css',
+    dest: developmentAssets + '/css',
+    options: {
+        baseDir: build,
+        extensions: ['png'],
+        maxImageSize: 20 * 1024, // bytes
+        debug: false
+    }
+};
+
+gulp.task('base64', ['sass'], function () {
+    return gulp.src(config.src)
+      .pipe(base64(config.options))
+      .pipe(gulp.dest(config.dest));
 });
 
-gulp.task('default', ['clean'], function () {
-    console.log("completed !")
+// ºÏ²¢¡¢Ñ¹Ëõ¡¢ÖØÃüÃûcss
+gulp.task('css', function () {
+    return gulp.src('src/css/*.css')
+      .pipe(concat('main.css'))
+      .pipe(gulp.dest('dest/css'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(minifycss())
+      .pipe(gulp.dest('dest/css'))
+      .pipe(notify({ message: 'css task ok' }));
+});
+
+// ¼ì²éjs
+gulp.task('lint', function () {
+    return gulp.src('src/js/*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(notify({ message: 'lint task ok' }));
+});
+
+// ºÏ²¢¡¢Ñ¹ËõjsÎÄ¼ş
+gulp.task('js', function () {
+    return gulp.src('src/js/*.js')
+      .pipe(concat('all.js'))
+      .pipe(gulp.dest('dest/js'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(uglify())
+      .pipe(gulp.dest('dest/js'))
+      .pipe(notify({ message: 'js task ok' }));
+});
+
+// Ä¬ÈÏÈÎÎñ
+gulp.task('default', function () {
+    gulp.run('img', 'css', 'lint', 'js', 'html');
+
+    // ¼àÌıhtmlÎÄ¼ş±ä»¯
+    gulp.watch('src/*.html', function () {
+        gulp.run('html');
+    });
+
+    // Watch .css files
+    gulp.watch('src/css/*.css', ['css']);
+
+    // Watch .js files
+    gulp.watch('src/js/*.js', ['lint', 'js']);
+
+    // Watch image files
+    gulp.watch('src/images/*', ['img']);
 });

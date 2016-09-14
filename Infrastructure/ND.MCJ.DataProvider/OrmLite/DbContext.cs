@@ -14,10 +14,10 @@ namespace ND.MCJ.DataProvider.OrmLite
 {
     public class DbContext
     {
-        protected static OrmLiteConnectionFactory _db;
-        private static String DefaultConnection = String.Empty;
+        protected static OrmLiteConnectionFactory Db;
+        private static String _defaultConnection = String.Empty;
         private static readonly ConnectionStringSettingsCollection SqlConnections = ConfigurationManager.ConnectionStrings;
-        private static Dictionary<String, OrmLiteConnectionFactory> dicConnections
+        private static Dictionary<String, OrmLiteConnectionFactory> DicConnections
         {
             get
             {
@@ -26,7 +26,7 @@ namespace ND.MCJ.DataProvider.OrmLite
                 OrmLiteConfig.DialectProvider = SqlServerDialect.Provider;
                 foreach (ConnectionStringSettings item in SqlConnections)
                 {
-                    if (SqlConnections.IndexOf(item) == 0) { DefaultConnection = item.Name; }
+                    if (SqlConnections.IndexOf(item) == 0) { _defaultConnection = item.Name; }
                     OrmLiteConnectionFactory.NamedConnections.Add(item.Name, new OrmLiteConnectionFactory(item.ConnectionString));
                 }
                 return OrmLiteConnectionFactory.NamedConnections;
@@ -34,25 +34,25 @@ namespace ND.MCJ.DataProvider.OrmLite
         }
         protected DbContext(string nameOrConnectionString)
         {
-            _db = dicConnections.TryGetValue(nameOrConnectionString, out _db) ?
-                _db : new OrmLiteConnectionFactory(nameOrConnectionString);
+            Db = DicConnections.TryGetValue(nameOrConnectionString, out Db) ?
+                Db : new OrmLiteConnectionFactory(nameOrConnectionString);
         }
 
         protected DbContext()
         {
-            if (dicConnections.Count == 0)
+            if (DicConnections.Count == 0)
             { throw new Exception("数据库连接字符串配置错误！"); }
-            _db = dicConnections[DefaultConnection];
+            Db = DicConnections[_defaultConnection];
         }
 
         protected static void Run(Action<IDbConnection> action)
         {
-            _db.Run(action);
+            Db.Run(action);
         }
 
         protected static T Run<T>(Func<IDbConnection, T> func)
         {
-            return _db.Run(func);
+            return Db.Run(func);
         }
     }
 }

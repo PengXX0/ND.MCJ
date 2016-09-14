@@ -1,4 +1,4 @@
-﻿using ND.MCJ.AdminService.Interface;
+﻿using ND.MCJ.AdminWebService.Interface;
 using ND.MCJ.DataProvider;
 using ND.MCJ.IRepository;
 using ND.MCJ.Model;
