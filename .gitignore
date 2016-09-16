@@ -4,3 +4,6 @@ App_Log
 bin
 packages
 /Gulpfile/node_modules
+*.map
+*.mdf
+*.ldf
