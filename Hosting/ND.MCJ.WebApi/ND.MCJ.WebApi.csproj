@@ -598,6 +598,33 @@
     <Content Include="App_Config\JdPay.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\jquery-1.10.2.min.js.map">
+      <DependentUpon>jquery-1.10.2.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\webuploader\webuploader.custom.min.js.map">
+      <DependentUpon>webuploader.custom.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\webuploader\webuploader.flashonly.min.js.map">
+      <DependentUpon>webuploader.flashonly.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\webuploader\webuploader.html5only.min.js.map">
+      <DependentUpon>webuploader.html5only.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\webuploader\webuploader.min.js.map">
+      <DependentUpon>webuploader.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\webuploader\webuploader.withoutimage.min.js.map">
+      <DependentUpon>webuploader.withoutimage.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js.map">
+      <DependentUpon>ZeroClipboard.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\ueditor.parse.min.js.map">
+      <DependentUpon>ueditor.parse.min.js</DependentUpon>
+    </Content>
+    <Content Include="Areas\Help\Document\dist\plugs\ueditor\ueditor.all.min.js.map">
+      <DependentUpon>ueditor.all.min.js</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\www.MCJ.com.pubxml" />
   </ItemGroup>
   <PropertyGroup>

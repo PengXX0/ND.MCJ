@@ -12,7 +12,9 @@ namespace NC.MCJ.WebApi.Controllers
     {
         private readonly IUsersService _usersService;
         private readonly ResponseModel _response;
-        public UsersController(IUsersService usersService, ResponseModel response)
+        public UsersController(
+            IUsersService usersService,
+            ResponseModel response)
         {
             _response = response;
             _usersService = usersService;
