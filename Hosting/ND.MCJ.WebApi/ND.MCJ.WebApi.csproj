@@ -180,7 +180,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Help\App_Start\HelpPageConfig.cs" />
     <Compile Include="Areas\Help\Controllers\DevController.cs" />
-    <Compile Include="Areas\Help\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\Help\App_Start\HelpPageAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
