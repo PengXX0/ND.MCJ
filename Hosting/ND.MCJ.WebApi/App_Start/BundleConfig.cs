@@ -18,7 +18,7 @@ namespace NC.MCJ.WebApi
             bundles.Add(new StyleBundle("~/Content/Jformat/").Include(
                 "~/Areas/Help/Document/dist/plugs/json.formater/json.formater.css"));
 
-            bundles.Add(new StyleBundle("~/Content/style/").Include(
+            bundles.Add(new StyleBundle("~/bundles/style/").Include(
                 "~/Areas/Help/Document/dist/css/bootstrap.css",
                 "~/Areas/Help/Document/dist/css/css.css"));
         }

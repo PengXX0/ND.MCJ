@@ -7,12 +7,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>接口调试</title>
-    @Styles.Render("~/Content/style/", "~/Content/Jformat/")
+    <script>var json=@Html.Raw(Model.Response);</script>
+    @Styles.Render("~/bundles/style/", "~/Content/Jformat/")
     @Scripts.Render("~/bundles/script", "~/bundles/Jformat")
 </head>
 <body>
     <div class="col-md-10" style="padding-top: 50px;">
-        <form class="form-horizontal">
+        <form class="debugform form-horizontal">
             <div class="form-group">
                 <label for="inputText3" class="col-sm-2 control-label">地址</label>
                 <div class="col-sm-10">
@@ -65,14 +66,10 @@
             <hr />
             <div class="form-group">
                 <label for="inputText3" class="col-sm-2 control-label">响应</label>
-                <input type="hidden" name="response" />
-                <div class="col-sm-10 response" data-json="@Model.Response">
+                <div class="col-sm-10 response">
                 </div>
             </div>
         </form>
     </div>
-    <script type="application/json">
-        var json=@Html.Raw(Model.Response);
-    </script>
 </body>
 </html>
