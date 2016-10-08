@@ -21,7 +21,7 @@ namespace ND.MCJ.AOP.Security
             //if (nv.AllKeys.Contains("Platform") && nv["Platform"] == "3") { return true; }
             if (!(nv.AllKeys.Contains("Sign") && nv.AllKeys.Contains("PlatformId"))) return false;
             var sign = nv["Sign"].Replace(" ", "+");
-            var dic = DataConvert.ToDictionary(nv, true);
+            var dic = nv.ToDictionary(true);
             dic.Remove("Sign");
             var str = MakeSign(dic);
             return sign == str;
