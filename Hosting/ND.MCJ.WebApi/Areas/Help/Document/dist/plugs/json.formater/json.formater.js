@@ -20,7 +20,7 @@ JsonFormater.prototype = {
         this.tab = this.multiplyString(this.options.tabSize, this.options.singleTab);
     },
     doFormat: function (json) {
-        json = $(this.options.dom).data("json");
+        //json = $(this.options.dom).data("json");
         var html;
         var obj;
         try {

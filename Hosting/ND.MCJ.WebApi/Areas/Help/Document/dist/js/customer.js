@@ -21,14 +21,16 @@
             complete: function () { $(obj).find('input[type="submit"]').button("reset"); },
             url: "/Help/Dev/Debug/?Url=" + encodeURI(data.action) + "&Method=" + data.method + "&PlatformId=" + data.PlatformId + "&Parma=" + encodeURI(data.parameter.replace(/&/g, "|")),
             success: function (response) {
-                $(".response").data("json", response.Response); doc.formatJson(); $("input[name='sign']").val(response.Sign);
+                json = response.Response;
+                //$(".response").data("json", response.Response);
+                doc.formatJson(response.Response); $("input[name='sign']").val(response.Sign);
             },
             error: function () { modal.alert({ content: "请求出错了 ！", cancel: "确定", type: "danger" }); },
             headers: { "Authenticate": " Basic eXN0Omp1bGk=" }
         }); return false;
     },
     formatJson: function (json) {
-        if ($("input[name='response']").length > 0) {
+        if ($(".debugform").length > 0) {
             (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat(json);
             $(".console").change(function () { (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat($("input[name='response']").val()); });
         }
@@ -48,7 +50,7 @@
         $(".menu").find("li ul").prev("a").css("padding-left", "0").prepend('<i class="arrow-right"></i>');
         $(".menu").find("a").bind("click", function () { doc.toggleActive(this); });
         $(".form-horizontal").bind("submit", function () { return doc.submitForm(this); });
-        if ($("input[name='response']")) { this.formatJson(); }
+        if ($(".debugform").length > 0) { this.formatJson(json); }
     }
 };
 $(function () { doc.init(); });
