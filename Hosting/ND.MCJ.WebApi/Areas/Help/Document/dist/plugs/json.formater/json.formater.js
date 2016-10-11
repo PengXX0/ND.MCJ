@@ -24,13 +24,13 @@ JsonFormater.prototype = {
         try {
             if (typeof json == "object") {
                 obj = [json];
-            } else {
-                if (json === "") {
-                    json = "\"\"";
-                }
-                if (typeof json == "string") {
+            }
+            else if (typeof json == "string" && json !== "\"\"") {
+                if ((json.substring(0, 1) !== "\"" && json.length > 2) || json.length === 0) {
                     json = "\"" + json + "\"";
                 }
+                obj = eval("[" + json + "]");
+            } else {
                 obj = eval("[" + json + "]");
             }
             html = this.processObject(obj[0], 0, false, false, false);
