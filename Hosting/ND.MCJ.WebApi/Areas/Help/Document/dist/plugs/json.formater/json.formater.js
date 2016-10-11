@@ -26,7 +26,8 @@ JsonFormater.prototype = {
                 obj = [json];
             }
             else if (typeof json == "string" && json !== "\"\"") {
-                if ((json.substring(0, 1) !== "\"" && json.length > 2) || json.length === 0) {
+                var first = json.substring(0, 1);
+                if ((first !== "\"" && first !== "{" && json.length > 2) || json.length === 0) {
                     json = "\"" + json + "\"";
                 }
                 obj = eval("[" + json + "]");
