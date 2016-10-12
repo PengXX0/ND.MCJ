@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace NC.MCJ.WebApi.Controllers
 {
-    // [Authorization]
+     [Authorization]
     public class UsersController : ApiController
     {
         private readonly IUsersService _usersService;

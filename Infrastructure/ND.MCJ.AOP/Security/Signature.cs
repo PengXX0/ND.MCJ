@@ -21,7 +21,7 @@ namespace ND.MCJ.AOP.Security
             //if (nv.AllKeys.Contains("Platform") && nv["Platform"] == "3") { return true; }
             if (!(nv.AllKeys.Contains("Sign") && nv.AllKeys.Contains("PlatformId"))) return false;
             var sign = nv["Sign"].Replace(" ", "+");
-            var dic = DataConvert.ToDictionary(nv, true);
+            var dic = nv.ToDictionary(true);
             dic.Remove("Sign");
             var str = MakeSign(dic);
             return sign == str;
@@ -38,7 +38,7 @@ namespace ND.MCJ.AOP.Security
             var signStr = dic.OrderBy(q => q.Key).Aggregate("", (c, q) => c + dic[q.Key] + "|");
             var sb = new StringBuilder(32);
             MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] t = md5.ComputeHash(Encoding.UTF8.GetBytes(signStr + appKey));
+            var t = md5.ComputeHash(Encoding.UTF8.GetBytes(signStr + appKey));
             foreach (var t1 in t) { sb.Append(t1.ToString("x").PadLeft(2, '0')); }
             return sb.ToString();
         }

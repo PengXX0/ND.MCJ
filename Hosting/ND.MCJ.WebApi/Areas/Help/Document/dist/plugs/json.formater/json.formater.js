@@ -20,16 +20,18 @@ JsonFormater.prototype = {
         this.tab = this.multiplyString(this.options.tabSize, this.options.singleTab);
     },
     doFormat: function (json) {
-        //json = $(this.options.dom).data("json");
-        var html;
-        var obj;
+        var html; var obj;
         try {
-            if (typeof json == 'object') {
+            if (typeof json == "object") {
                 obj = [json];
-            } else {
-                if (json == "") {
-                    json = "\"\"";
+            }
+            else if (typeof json == "string" && json !== "\"\"") {
+                var first = json.substring(0, 1);
+                if ((first !== "\"" && first !== "{" && json.length > 2) || json.length === 0) {
+                    json = "\"" + json + "\"";
                 }
+                obj = eval("[" + json + "]");
+            } else {
                 obj = eval("[" + json + "]");
             }
             html = this.processObject(obj[0], 0, false, false, false);
@@ -60,7 +62,7 @@ JsonFormater.prototype = {
         }, 0);
     },
     collapseAll: function () {
-        if (this.isFormated == false) {
+        if (this.isFormated === false) {
             return;
         }
         var that = this;
@@ -91,7 +93,7 @@ JsonFormater.prototype = {
         if (!isPropertyContent) {
             tabs = this.multiplyString(indent, this.tab);
         }
-        if (data != null && data.length > 0 && data.charAt(data.length - 1) != "\n") {
+        if (data != null && data.length > 0 && data.charAt(data.length - 1) !== "\n") {
             data = data + "\n";
         }
         return tabs + data;
@@ -105,13 +107,12 @@ JsonFormater.prototype = {
         return str;
     },
     formatFunction: function (indent, obj) {
-        var tabs;
         var i;
         var funcStrArray = obj.toString().split("\n");
         var str = "";
-        tabs = this.multiplyString(indent, this.tab);
+        var tabs = this.multiplyString(indent, this.tab);
         for (i = 0; i < funcStrArray.length; i++) {
-            str += ((i == 0) ? "" : tabs) + funcStrArray[i] + "\n";
+            str += ((i === 0) ? "" : tabs) + funcStrArray[i] + "\n";
         }
         return str;
     },
@@ -152,7 +153,7 @@ JsonFormater.prototype = {
                 clpsHtml = this.options.isCollapsible ? "</span>" : "";
                 html += this.getRow(indent, clpsHtml + "<span class='jf-ArrayBrace'>]</span>" + comma);
             }
-        } else if (type == 'object') {
+        } else if (type === 'object') {
             if (obj == null) {
                 html += this.formatLiteral("null", "", comma, indent, isArray, "Null");
             } else {

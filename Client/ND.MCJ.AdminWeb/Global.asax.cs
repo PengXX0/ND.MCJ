@@ -25,6 +25,11 @@ namespace ND.MCJ.AdminWeb
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Bootstrapper.Register(ConfigurationManager.AppSettings);
+
+        }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
         }
     }
 }
