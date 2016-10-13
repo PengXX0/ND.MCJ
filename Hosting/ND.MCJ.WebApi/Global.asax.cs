@@ -1,5 +1,4 @@
-﻿using ND.MCJ.AOP;
-using ND.MCJ.AOP.Logging;
+﻿using ND.MCJ.AOP.Logging;
 using System;
 using System.Configuration;
 using System.Web;
