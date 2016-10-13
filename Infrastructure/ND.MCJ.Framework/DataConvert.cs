@@ -31,6 +31,11 @@ namespace ND.MCJ.Framework
             return String.Join("&", list);
         }
 
+        public static String ToQueryString(this IDictionary<String, String> dic)
+        {
+            return dic.Aggregate("", (current, i) => current + (i.Key + "=" + i.Value + "&")).TrimEnd('&');
+        }
+
         /// <summary>
         /// 返回Model的第一条错误信息
         /// </summary>
@@ -39,11 +44,6 @@ namespace ND.MCJ.Framework
         public static String FirstError(this ModelStateDictionary modelState)
         {
             return modelState.First(m => m.Value.Errors.Any()).Value.Errors.First(s => s.ErrorMessage.Any()).ErrorMessage;
-        }
-
-        public static String ToQueryString(this IDictionary<String, String> dic)
-        {
-            return dic.Aggregate("", (current, i) => current + (i.Key + "=" + i.Value + "&")).TrimEnd('&');
         }
 
         public static List<SelectListItem> ToListItem<T>()
