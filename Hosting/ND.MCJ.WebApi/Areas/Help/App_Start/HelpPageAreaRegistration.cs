@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace NC.MCJ.WebApi.Areas.Help
+namespace NC.MCJ.WebApi.Areas.Help.App_Start
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {
@@ -12,7 +12,7 @@ namespace NC.MCJ.WebApi.Areas.Help
             context.MapRoute(
                 "Default_Help",
                 "Help/{controller}/{action}",
-                new { controller = "Dev", action = "Docs"});
+                new { controller = "Dev", action = "Docs" });
             HelpPageConfig.Register(GlobalConfiguration.Configuration);
         }
     }
