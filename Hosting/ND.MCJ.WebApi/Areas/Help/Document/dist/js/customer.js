@@ -32,7 +32,7 @@
     formatJson: function (json) {
         if ($(".debugform").length > 0) {
             (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat(json);
-            $(".console").change(function () { (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat($("input[name='response']").val()); });
+            $(".console").change(function () { (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat(json); });
         }
     },
     serializeJson: function (obj) {
