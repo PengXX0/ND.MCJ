@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using ND.MCJ.AOP.Logging;
 using ND.MCJ.Model;
 using ND.MCJ.Framework;
+using ND.MCJ.Framework.Converter;
 
 namespace ND.MCJ.AOP.Security.MvcFilter
 {

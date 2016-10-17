@@ -5,6 +5,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using ND.MCJ.Framework.Converter;
 
 namespace ND.MCJ.AOP.Security
 {

@@ -1,10 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ND.MCJ.Framework
+namespace ND.MCJ.Framework.Converter
 {
     public static class ConvertJson
     {
@@ -13,9 +9,9 @@ namespace ND.MCJ.Framework
             return JsonConvert.SerializeObject(obj);
         }
 
-        public static T ToDataFromJson<T>(this string obj)
+        public static T FromJson<T>(this string json)
         {
-            return JsonConvert.DeserializeObject<T>(obj);
+            return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }

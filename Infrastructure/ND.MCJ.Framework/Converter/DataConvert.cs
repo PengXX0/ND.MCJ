@@ -1,26 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Reflection;
+using System.Web.Mvc;
 using System.Xml;
 using Newtonsoft.Json;
-using System.Web.Mvc;
-using System.Collections.Specialized;
 
-namespace ND.MCJ.Framework
+namespace ND.MCJ.Framework.Converter
 {
     public static class DataConvert
     {
-        public static String ToJson<T>(this T obj)
-        {
-            return JsonConvert.SerializeObject(obj);
-        }
-
-        public static T ToDataFromJson<T>(this String obj)
-        {
-            return JsonConvert.DeserializeObject<T>(obj);
-        }
-
         public static String ToQueryString(this Object obj)
         {
             var list = from p in obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)

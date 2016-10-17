@@ -2,6 +2,7 @@
 using System.Text;
 using System.Web;
 using ND.MCJ.Framework;
+using ND.MCJ.Framework.Converter;
 
 namespace ND.MCJ.AOP.Logging
 {
