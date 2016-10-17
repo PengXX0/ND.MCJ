@@ -32,7 +32,7 @@
     formatJson: function (json) {
         if ($(".debugform").length > 0) {
             (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat(json);
-            $(".console").change(function () { (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat($("input[name='response']").val()); });
+            $(".console").change(function () { (new JsonFormater({ dom: ".response", isCollapsible: $(".console").prop("checked") })).doFormat(json); });
         }
     },
     serializeJson: function (obj) {
@@ -50,6 +50,7 @@
         $(".menu").find("li ul").prev("a").css("padding-left", "0").prepend('<i class="arrow-right"></i>');
         $(".menu").find("a").bind("click", function () { doc.toggleActive(this); });
         $(".form-horizontal").bind("submit", function () { return doc.submitForm(this); });
+        $(".form-horizontal").bind("keyup", function (event) { if (event.keyCode == 13) { return doc.submitForm(this); } })
         if ($(".debugform").length > 0) { this.formatJson(json); }
     }
 };

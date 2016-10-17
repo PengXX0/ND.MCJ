@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter\ConvertJson.cs" />
     <Compile Include="DataConvert.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Encryption.cs" />

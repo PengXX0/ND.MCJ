@@ -12,7 +12,8 @@ namespace NC.MCJ.WebApi.Areas.Help.App_Start
             context.MapRoute(
                 "Default_Help",
                 "Help/{controller}/{action}",
-                new { controller = "Dev", action = "Docs" });
+                new { controller = "Dev", action = "Docs" },
+                new[] { "NC.MCJ.WebApi.Areas.Help.Controllers" });
             HelpPageConfig.Register(GlobalConfiguration.Configuration);
         }
     }
