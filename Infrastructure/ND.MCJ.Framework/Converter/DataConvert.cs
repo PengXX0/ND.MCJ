@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Web.Mvc;
 using System.Xml;
 using Newtonsoft.Json;
+// ReSharper disable PossibleNullReferenceException
 
 namespace ND.MCJ.Framework.Converter
 {

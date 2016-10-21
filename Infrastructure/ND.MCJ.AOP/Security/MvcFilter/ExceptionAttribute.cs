@@ -30,7 +30,6 @@ namespace ND.MCJ.AOP.Security.MvcFilter
 
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            //Controller.ViewData.ModelState
             if (!filterContext.Controller.ViewData.ModelState.IsValid && (IsService ?? true))
             {
                 var jsonResult = new JsonResult

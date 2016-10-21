@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -44,24 +43,24 @@ namespace ND.MCJ.DataProvider.EntityFramework
             return entity;
         }
 
-        public long Count<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
+        public long Count<T>(Expression<Func<T, bool>> predicate = null) where T : BaseModel, new()
         {
-            return Set<T>().LongCount<T>(conditions);
+            return predicate == null ? Set<T>().LongCount() : Set<T>().LongCount(predicate);
         }
 
-        public T FirstOrDefault<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
+        public T FirstOrDefault<T>(Expression<Func<T, bool>> predicate = null) where T : BaseModel, new()
         {
-            return Set<T>().FirstOrDefault(conditions);
+            return predicate == null ? Set<T>().FirstOrDefault() : Set<T>().FirstOrDefault(predicate);
         }
 
         public T FirstOrDefault<T>(string filter, params Object[] filterParams) where T : BaseModel, new()
         {
-            return Database.SqlQuery<T>(filter, filterParams).FirstOrDefault<T>();
+            return Database.SqlQuery<T>(filter, filterParams).FirstOrDefault();
         }
 
-        public T First<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
+        public T First<T>(Expression<Func<T, bool>> predicate = null) where T : BaseModel, new()
         {
-            return Set<T>().First<T>(conditions);
+            return predicate == null ? Set<T>().First() : Set<T>().First(predicate);
         }
 
         public T Insert<T>(T entity) where T : BaseModel, new()
@@ -92,14 +91,14 @@ namespace ND.MCJ.DataProvider.EntityFramework
             return Database.ExecuteSqlCommand(sql, parameters);
         }
 
-        public List<T> FindAll<T>(Expression<Func<T, bool>> conditions = null) where T : BaseModel, new()
+        public List<T> FindAll<T>(Expression<Func<T, bool>> predicate = null) where T : BaseModel, new()
         {
-            return conditions == null ? Set<T>().ToList() : Set<T>().Where(conditions).ToList();
+            return predicate == null ? Set<T>().ToList() : Set<T>().Where(predicate).ToList();
         }
 
-        public PagedList<T> FindAllByPage<T, TS>(Expression<Func<T, bool>> conditions, int pageIndex, int pageSize, Expression<Func<T, TS>> orderBy, bool isDesc = true) where T : BaseModel, new()
+        public PagedList<T> FindAllByPage<T, TS>(Expression<Func<T, bool>> predicate, int pageIndex, int pageSize, Expression<Func<T, TS>> orderBy, bool isDesc = true) where T : BaseModel, new()
         {
-            var queryList = conditions == null ? Set<T>() : Set<T>().Where(conditions);
+            var queryList = predicate == null ? Set<T>() : Set<T>().Where(predicate);
             return (isDesc ? queryList.OrderByDescending(orderBy) : queryList.OrderBy(orderBy)).ToPagedList(pageIndex, pageSize);
         }
 
@@ -144,7 +143,7 @@ namespace ND.MCJ.DataProvider.EntityFramework
                                                    WHERE T._RowID > (({6} - 1) * {5})  AND T._RowID <= ({6} * {5})  
                                                    ORDER BY _RowID ASC;", selectBody, selectTable, where, group, sort, pageSize, pageIndex);
             }
-            var list = Database.SqlQuery<T>(sql.ToString()).ToList<T>();
+            var list = Database.SqlQuery<T>(sql.ToString()).ToList();
             return new PagedList<T>(list, pageIndex, pageSize, recordCount);
         }
         public override int SaveChanges()

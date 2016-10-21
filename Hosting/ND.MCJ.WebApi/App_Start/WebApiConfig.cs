@@ -24,7 +24,7 @@ namespace NC.MCJ.WebApi
             //    routeTemplate: "api/{controller}/{id}",
             //    defaults: new { id = RouteParameter.Optional }
             //);
-                    
+
 
             //optional: 设置只返回json
             //config.Services.Replace(typeof(IContentNegotiator), new JsonContentNegotiator());

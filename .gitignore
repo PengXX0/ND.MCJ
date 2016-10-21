@@ -6,3 +6,5 @@ bin
 *.map
 *.mdf
 *.ldf
+*.user
+*.suo
