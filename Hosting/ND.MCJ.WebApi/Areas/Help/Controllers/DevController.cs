@@ -8,6 +8,7 @@ using System;
 using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using ServiceStack.Text;
@@ -115,24 +116,23 @@ namespace NC.MCJ.WebApi.Areas.Help.Controllers
             };
             var formData = (parma.TrimEnd('&') + "&Sign=" + sign);
             var nc = new NameValueCollection { { "Authorization", sign } };
-
+            Action<HttpWebRequest> header = s => { s.Headers.Add(nc); s.UserAgent = RequestHelper.UserAgent; };
             try
             {
                 switch (request.Method.ToUpper())
                 {
                     case "GET":
-                        request.Url = (request.Url + "?" + formData);
-                        response.Response = request.Url.GetJsonFromUrl(s => s.Headers.Add(nc));
+                        response.Response = (request.Url + "?" + formData).GetJsonFromUrl(header);
                         break;
                     case "POST":
-                        response.Response = request.Url.PostToUrl(formData, WebRequestExtensions.Json, s => s.Headers.Add(nc));
+                        response.Response = request.Url.PostToUrl(formData, WebRequestExtensions.Json, header);
                         break;
                     case "PUT":
-                        response.Response = request.Url.PutToUrl(formData, WebRequestExtensions.Json, s => s.Headers.Add(nc));
+                        response.Response = request.Url.PutToUrl(formData, WebRequestExtensions.Json, header);
                         break;
                     case "DELETE":
                         request.Url = (request.Url + "?" + formData);
-                        response.Response = request.Url.DeleteFromUrl(WebRequestExtensions.Json, s => s.Headers.Add(nc));
+                        response.Response = request.Url.DeleteFromUrl(WebRequestExtensions.Json, header);
                         break;
                 }
             }

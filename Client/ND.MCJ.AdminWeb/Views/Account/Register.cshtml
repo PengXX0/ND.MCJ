@@ -2,13 +2,13 @@
 @{
     ViewBag.Title = "注册";
 }
-
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
     <h2>新建帐户。</h2>
 </hgroup>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary()
 
