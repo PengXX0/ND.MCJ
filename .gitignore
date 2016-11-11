@@ -10,3 +10,5 @@ bin
 *.suo
 /*.suo
 /*.user
+/ND.MCJ.v12.suo
+/ND.MCJ.sln.DotSettings.user
