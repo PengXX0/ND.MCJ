@@ -8,3 +8,5 @@ bin
 *.ldf
 *.user
 *.suo
+/*.suo
+/*.user
